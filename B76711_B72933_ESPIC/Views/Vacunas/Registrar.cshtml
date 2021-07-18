@@ -1,0 +1,82 @@
+﻿@model B76711_B72933_ESPIC.Models.VacunasModel
+
+@{
+    ViewData["Title"] = "Registrar";
+    Layout = "_LayoutVacunas";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-8 p-5">
+            <h1>Registrar Vacunas</h1>
+            <form asp-action="Registrar" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <select asp-for="cedula" class="form-control" placeholder="Paciente">
+                        @foreach (PacienteModel tem in ViewBag.Paciente)
+                        {
+                            <option value="@tem.cedula">@tem.nombre</option>
+
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" asp-for="nombre" placeholder="Vacuna" required />
+                    <span asp-validation-for="nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <select asp-for="centro" class="form-control" placeholder="Centro de Salud">
+                        <option value="Ebais la Suiza">Ebais la Suiza</option>
+                        <option value="Ebais Central Turrialba">Ebais Central Turrialba</option>
+                        <option value="Hospital William Allen Taylor Turrialba">Hospital William Allen Taylor Turrialba</option>
+                        <option value="Hospital Max Peralta Cartago">Hospital Max Peralta Cartago</option>
+                        <option value="Hospital San Juan de Dios">Hospital San Juan de Dios</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" asp-for="descripcion" placeholder="Descripción" rows="4" style="resize: none;" required></textarea>
+                    <span asp-validation-for="descripcion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="fecha" class="control-label">Fecha de aplicación</label>
+                    <input type="date" class="form-control" asp-for="fecha" required />
+                    <span asp-validation-for="fecha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="fechasiquiente" class="control-label">Fecha de proxima vacuna</label>
+                    <input type="date" class="form-control" asp-for="fechasiquiente" required />
+                    <span asp-validation-for="fechasiquiente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Registrar Vacuna" class="btn btn-primary" />
+                </div>
+            </form>
+            <div>
+                <a asp-action="Index">Regresar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

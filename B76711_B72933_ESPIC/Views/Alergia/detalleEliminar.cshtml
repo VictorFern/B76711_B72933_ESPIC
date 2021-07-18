@@ -1,0 +1,74 @@
+﻿@model B76711_B72933_ESPIC.Models.AlergiaModel
+
+@{
+    ViewData["Title"] = "Eliminar Alergia";
+    Layout = "_LayoutAlergias";
+}
+
+
+<h3>Seguro que quiere eliminar el registro de alergia?</h3>
+<div>
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label asp-for="paciente.cedula" class="control-label">Cedula</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.paciente.cedula)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="nombre" class="control-label">Alergia</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="centro" class="control-label">Centro de Salud</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.centro)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="medicina" class="control-label">Medicamento</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.medicina)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="descripcion" class="control-label">Descripcion</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="fecha" class="control-label">Fecha de la Alergia</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+    </dl>
+
+    <form asp-action="Eliminar">
+        <div class="form-group">
+            <input asp-for="cedula" class="form-control" placeholder="Cedula" readonly hidden />
+            <span asp-validation-for="cedula" class="text-danger"></span>
+        </div>
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="lista">Regresar</a>
+    </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

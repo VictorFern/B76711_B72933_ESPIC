@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Lista";
+    Layout = "_LayoutVacunas";
+}
+
+@model VacunasModel;
+    <div class="container">
+        <div class="table-responsive-sm">
+            <h1>Lista de Vacunas</h1>
+            <table class="table table-bordered table-hover table-condensed" id="table">
+                <thead>
+                    <tr id="table">
+                        <th id="table">Cedula</th>
+                        <th id="table">Paciente</th>
+                        <th id="table">Doctor</th>
+                        <th id="table">Vacuna</th>
+                        <th id="table">Fecha de la vacuna</th>
+                        <th id="table">Proxima vacuna</th>
+                        <th id="table">Actualizar vacuna</th>
+                        <th id="table">Eliminar vacuna</th>
+                    </tr>
+                </thead>
+                @foreach (VacunasModel tem in ViewBag.Lista)
+                {
+                    <tr id="table">
+                        <td id="table">@tem.paciente.cedula</td>
+                        <td id="table">@tem.paciente.nombre</td>
+                        <td id="table">@tem.medico.nombre</td>
+                        <td id="table">@tem.nombre</td>
+                        <td id="table">@tem.fecha</td>
+                        <td id="table">@tem.fechasiquiente</td>
+                        <td id="table">@Html.ActionLink("Actualizar", "actualizar", new { id = tem.cedula })</td>
+                        <td id="table">@Html.ActionLink("Eliminar", "detalleEliminar", new { id = tem.cedula })</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />

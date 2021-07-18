@@ -1,0 +1,81 @@
+﻿@model B76711_B72933_ESPIC.Models.AlergiaModel
+
+@{
+    ViewData["Title"] = "actualizar";
+    Layout = "_LayoutAlergias";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-8 p-5">
+            <h1>Actualizar Alergia</h1>
+            <form asp-action="actualizar">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <input asp-for="cedula" class="form-control" placeholder="Cedula" readonly hidden />
+                    <span asp-validation-for="cedula" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="paciente.cedula" class="form-control" placeholder="Cedula" readonly />
+                    <span asp-validation-for="paciente.cedula" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="nombre" class="form-control" placeholder="Vacuna" required readonly />
+                    <span asp-validation-for="nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="centro" class="form-control" placeholder="Centro de Salud" required readonly />
+                    <span asp-validation-for="centro" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <select asp-for="medicina" class="form-control">
+                        <option value="Cetirizina">Cetirizina </option>
+                        <option value="Olopatadina">Olopatadina</option>
+                        <option value="Budesonida">Budesonida </option>
+                        <option value="Epinefrina">Epinefrina </option>
+                        <option value="Loratadina">Loratadina </option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" asp-for="descripcion" placeholder="Descripción" rows="4" style="resize: none;" required></textarea>
+                    <span asp-validation-for="descripcion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="fecha" class="control-label">Fecha de la Vacuna</label>
+                    <input asp-for="fecha" class="form-control" placeholder="Fecha vacuna" required />
+                    <span asp-validation-for="fecha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Actualizar" class="btn btn-primary" />
+                </div>
+            </form>
+            <div>
+                <a asp-action="lista">Regresar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

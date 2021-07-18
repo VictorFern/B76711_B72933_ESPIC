@@ -1,0 +1,68 @@
+﻿@model B76711_B72933_ESPIC.Models.CitasModel
+
+@{
+    ViewData["Title"] = "Eliminar Cita";
+    Layout = "_LayoutCitas";
+}
+
+
+<h3>Seguro que quiere eliminar el registro de cita?</h3>
+<div>
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label asp-for="paciente.cedula" class="control-label">Cedula</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.paciente.cedula)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="centro" class="control-label">Centro Salud</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.centro)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="especialidad" class="control-label">Especialidad</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.especialidad)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="fecha" class="control-label">Fecha de la Vacuna</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="detalle" class="control-label">Detalle</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.detalle)
+        </dd>
+    </dl>
+
+    <form asp-action="Eliminar">
+        <div class="form-group">
+            <input asp-for="cedula" class="form-control" placeholder="Cedula" readonly hidden />
+            <span asp-validation-for="cedula" class="text-danger"></span>
+        </div>
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="lista">Regresar</a>
+    </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

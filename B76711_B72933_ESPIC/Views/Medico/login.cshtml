@@ -1,0 +1,60 @@
+﻿@model B76711_B72933_ESPIC.Models.MedicoModel;
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutLogin";
+
+}
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <h3 id="login1">Login</h3>
+            <form asp-action="login" name="login" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="cedula" placeholder="Cedula" value="" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" asp-for="codigo" placeholder="Codigo Doctor" value="" required />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" asp-for="contrasenna" placeholder="Contraseña" value="" required />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Ingresar" />
+                </div>
+
+                <div class="form-group">
+                    <a id="login1" class="btnForgetPwd" href="Medico/contrasena">Olvido su Contraseña?</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 login-form-2">
+
+            <span>
+                Puedes monitoriar a tus pacientes por ejemplo, con su historial de citas que a tenido o su proxima cita
+                ademas puedes controlar todo el registro de las vacunas que se les aplicado a cada uno de tus
+                paciente, controlar sus enfermedad o alergias que padecen, ofreciendo un control y brindando
+                sus medicamentos.<br><br>
+
+                @*<img id="img" alt="producto" src="public/img/3.jpg">*@
+
+            </span>
+
+        </div>
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,49 @@
+﻿@model B76711_B72933_ESPIC.Models.CitasModel
+@{
+    ViewData["Title"] = "Lista";
+    Layout = "_LayoutCitas";
+}
+<h1 class="text-center">Pacientes</h1>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div id="filtar" class="col-sm-12" style="margin-top: 100px;">
+        <form asp-action="listaPaciente" method="post">
+            <div class="form-group">
+                <select asp-for="cedula" class="form-control" placeholder="Paciente">
+                    @foreach (PacienteModel tem in ViewBag.Paciente)
+                    {
+                        <option value="@tem.cedula">@tem.nombre</option>
+
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="filtro" class="form-control" placeholder="Centro de Salud">
+                    <option value="Toda las citas">Toda las citas</option>
+                    <option value="Citas atentidas">Citas atentidas</option>
+                    <option value="Citas no atentidas">Citas no atentidas</option>
+                </select>
+            </div>
+            <div class="col-sm-5">
+                <input class="btn btn-primary" type="submit" id="buscarMA" name="buscarMA" value="Buscar paciente" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
