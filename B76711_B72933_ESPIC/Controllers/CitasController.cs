@@ -148,7 +148,7 @@ namespace B76711_B72933_ESPIC.Controllers
                 }
 
             }
-            ViewBag.Lista = lista;
+            ViewBag.Lista= lista;
             return View();
         }
 
