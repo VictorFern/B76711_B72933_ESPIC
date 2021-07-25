@@ -22,8 +22,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input class="form-control input-md" asp-for="nombre" placeholder="Alergia" required />
-                    <span asp-validation-for="nombre" class="text-danger"></span>
+                    <select asp-for="nombre" class="form-control" placeholder="Alergia">
+                        <option value="Alergias alimentarias">Alergias alimentarias</option>
+                        <option value="Alergia al los gatos">Alergia al los gatos</option>
+                        <option value="Alergia a la anestesia">Alergia a la anestesia</option>
+                        <option value="Alergia al polen">Alergia al polen</option>
+                        <option value="Alergia a los ácaros">Alergia a los ácaros</option>
+
+                    </select>
                 </div>
 
                 <div class="form-group">

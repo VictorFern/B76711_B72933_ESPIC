@@ -26,8 +26,17 @@
                 <div class="form-group">
                     <a id="login1" class="btnForgetPwd" href="Medico/contrasena">Olvido su Contraseña?</a>
                 </div>
+                @if (ViewData["Error"] != null)
+                {
+                    <div class="red">
+                        <script>alert("Datos incorrectos")</script>
+
+                    </div>
+                }
+              
             </form>
         </div>
+
         <div class="col-md-6 login-form-2">
 
 

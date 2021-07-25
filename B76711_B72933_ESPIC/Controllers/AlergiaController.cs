@@ -71,8 +71,10 @@ namespace B76711_B72933_ESPIC.Controllers
                     command.ExecuteReader();
                     connection.Close();
                 }
+                TempData["Success"] = "Se registro corectamente.";
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Registrar");
+            return View();
         }
 
         public IActionResult lista()
@@ -202,8 +204,10 @@ namespace B76711_B72933_ESPIC.Controllers
                     command.ExecuteReader();
                     connection.Close();
                 }
+                TempData["Success"] = "Se actualizo corectamente.";
+                return RedirectToAction("lista");
             }
-            return RedirectToAction("lista");
+            return View();
         }
 
         public IActionResult detalleEliminar(int id)
@@ -261,8 +265,10 @@ namespace B76711_B72933_ESPIC.Controllers
                     command.ExecuteReader();
                     connection.Close();
                 }
+                TempData["Success"] = "Se elimino corectamente.";
+                return RedirectToAction("lista");
             }
-            return RedirectToAction("lista");
+            return View();
         }
     }
 }
