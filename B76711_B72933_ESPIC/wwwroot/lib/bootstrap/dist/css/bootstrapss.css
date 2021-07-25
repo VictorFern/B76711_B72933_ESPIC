@@ -1774,11 +1774,6 @@ p {
     line-height: 1.4;
 }
 
-@media (min-width: 768px) {
-    .lead {
-        font-size: 21px;
-    }
-}
 
 @media only screen and (min-width: 280px) and (max-height: 653px) and (-webkit-min-device-pixel-ratio: 1.5) {
     #img {
@@ -1847,6 +1842,51 @@ p {
         margin-right: 50px;
     }
 }
+
+@media only screen and (min-width: 994px ) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #img {
+        width: 298px;
+        height: 215px;
+    }
+
+    #img1 {
+        width: 298px;
+        height: 180px;
+    }
+
+    #img2 {
+        width: 200px;
+        height: 152px;
+    }
+
+    #headlogo {
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (min-width: 1014px ) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #img {
+        width: 298px;
+        height: 214px;
+    }
+
+    #img1 {
+        width: 298px;
+        height: 179px;
+    }
+
+    #img2 {
+        width: 200px;
+        height: 152px;
+    }
+
+    #headlogo {
+        margin-right: 50px;
+    }
+}
+
 @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     #img {
         width: 240px;
@@ -1866,34 +1906,11 @@ p {
         margin-right: 50px;
     }
 }
-
-@media only screen and (min-device-width : 1024px) and (max-device-height : 768px) and (orientation : landscape) {
+/*Mi laptop*/
+@media only screen and (min-device-width : 1024px) and (max-device-height : 768px) {
     #img {
         width: 240px;
-        height: 214px;
-    }
-
-    #img1 {
-        width: 240px;
-        height: 179px;
-    }
-     
-
-    #img2 {
-        width: 200px;
-        height: 208px;
-    }
-
-    #headlogo {
-        margin-right: 50px;
-    }
-}
-
-@media only screen and (min-width: 1025px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-
-    #img {
-        width: 240px;
-        height: 249px;
+        height: 251px;
     }
 
     #img1 {
@@ -1910,7 +1927,78 @@ p {
         margin-right: 50px;
     }
 }
+/*Mi laptop*/
 
+/*ipad*/
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #img {
+        width: 240px;
+        height: 215px;
+    }
+
+    #img1 {
+        width: 240px;
+        height: 180px;
+    }
+
+    #img2 {
+        width: 200px;
+        height: 208px;
+    }
+
+    #headlogo {
+        margin-right: 50px;
+    }
+}
+/*ipad*/
+
+/*IPA PRO*/
+
+@media only screen and (min-width: 1025px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #img {
+    width: 240px;
+    height: 251px;
+}
+
+#img1 {
+    width: 240px;
+    height: 213px;
+}
+
+    #img2 {
+        width: 200px;
+        height: 208px;
+    }
+
+    #headlogo {
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #img {
+        width: 240px;
+        height: 215px;
+    }
+
+    #img1 {
+        width: 240px;
+        height: 180px;
+    }
+
+    #img2 {
+        width: 200px;
+        height: 208px;
+    }
+
+    #headlogo {
+        margin-right: 50px;
+    }
+}
+/*IPA PRO*/
 
 small,
 .small {

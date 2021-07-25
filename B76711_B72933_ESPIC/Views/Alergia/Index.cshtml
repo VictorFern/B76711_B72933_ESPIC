@@ -3,7 +3,15 @@
     Layout = "_LayoutAlergias";
 
 }
-
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Success"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+            <span aria-hidden="false">&times;</span>
+        </button>
+    </div>
+}
 <section class="section services-section" id="services">
     <div class="container">
         <div class="row">

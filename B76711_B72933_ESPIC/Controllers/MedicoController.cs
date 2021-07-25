@@ -84,15 +84,20 @@ namespace B76711_B72933_ESPIC.Controllers
                         connection.Close();
                     }
                 }
+
             }
-            if (medico.Count == 0)
-            {
-                return RedirectToAction("login");
-            }
-            else
+            if (medico.Count != 0)
             {
                 medico.Clear();
                 return RedirectToAction("Index");
+               
+            }
+            else
+            {
+
+                ViewData["Error"] = "Datos incorrectos";
+
+                return View("login");
             }
            
         }

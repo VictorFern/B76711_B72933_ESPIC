@@ -3,6 +3,15 @@
     ViewData["Title"] = "Lista";
     Layout = "_LayoutVacunas";
 }
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Success"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+            <span aria-hidden="false">&times;</span>
+        </button>
+    </div>
+}
 <h1 class="text-center">Pacientes</h1>
 <div class="row">
     <div class="col-md-3"></div>

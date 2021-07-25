@@ -22,8 +22,14 @@
                 </div>
 
                 <div class="form-group">
-                    <input class="form-control" asp-for="nombre" placeholder="Vacuna" required />
-                    <span asp-validation-for="nombre" class="text-danger"></span>
+                    <select asp-for="nombre" class="form-control" placeholder="Vacuna">
+                        <option value="Tdap">Tdap(Tétanos)</option>
+                        <option value="MMRV">MMRV(Sarampio,papera)</option>
+                        <option value="BioNTech, Pfizer">BioNTech, Pfize </option>
+                        <option value="Oxford, AstraZeneca">Oxford, AstraZeneca</option>
+                        <option value="Influenza">Influenza</option>
+
+                    </select>
                 </div>
 
                 <div class="form-group">
