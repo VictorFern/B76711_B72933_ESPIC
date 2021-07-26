@@ -71,7 +71,7 @@ namespace B76711_B72933_ESPIC.Controllers
                     command.ExecuteReader();
                     connection.Close();
                 }
-                TempData["Success"] = "Se registro corectamente.";
+                TempData["Success"] = "Se registró correctamente.";
                 return RedirectToAction("Index");
             }
             return View();
@@ -204,7 +204,7 @@ namespace B76711_B72933_ESPIC.Controllers
                     command.ExecuteReader();
                     connection.Close();
                 }
-                TempData["Success"] = "Se actualizo corectamente.";
+                TempData["Success"] = "Se actualizó correctamente.";
                 return RedirectToAction("lista");
             }
             return View();
@@ -265,7 +265,7 @@ namespace B76711_B72933_ESPIC.Controllers
                     command.ExecuteReader();
                     connection.Close();
                 }
-                TempData["Success"] = "Se elimino corectamente.";
+                TempData["Success"] = "Se eliminó correctamente.";
                 return RedirectToAction("lista");
             }
             return View();
