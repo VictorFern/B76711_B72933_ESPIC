@@ -241,6 +241,7 @@ namespace B76711_B72933_ESPIC.Controllers
                             citasModel.centro = pacienteReader["CENTRO_SALUD"].ToString();
                             citasModel.especialidad = pacienteReader["ESPECIALIDAD"].ToString();
                             citasModel.fecha = pacienteReader["FECHA"].ToString();
+                            citasModel.detalle = pacienteReader["DETALLE"].ToString();
                             citasModel.paciente = pacienteModel;
                             citasModel.medico = medicoTem;
 
